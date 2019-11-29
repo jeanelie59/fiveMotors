@@ -5,6 +5,7 @@
 
 body {
   background-color: sandybrown;
+  font-family: Verdana, sans-serif;
 }
 
 header {
@@ -21,7 +22,7 @@ header section img {
 }
 header nav {
   margin-top: 10px;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -37,25 +38,69 @@ header nav a {
   color: wheat;
 }
 header nav a:hover {
-  background-color: red;
+  background-color: blue;
 }
 header nav .active {
-  background-color: red;
+  background-color: blue;
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 100px;
   height: auto;
   background-color: white;
   padding: 10px;
   border-radius: 20px;
 }
+main[class=index] {
+  text-align: center;
+}
+main[class=index] article {
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+}
+main[class=index] article h4 {
+  width: 40%;
+}
+main[class=vehiculesDispo] {
+  text-align: center;
+}
+main[class=vehiculesDispo] div {
+  padding-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main[class=vehiculesDispo] div section {
+  position: relative;
+}
+main[class=vehiculesDispo] div section div {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+  background-color: white;
+  opacity: 0.7;
+  padding: 2px 5px 2px 5px;
+}
+main[class=vehiculesDispo] div section:hover div {
+  display: initial;
+}
 
 footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   background-color: rosybrown;
