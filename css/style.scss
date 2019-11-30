@@ -73,6 +73,10 @@ main {
       h4 {
         width: 40%;
       }
+      img {
+        border-radius: 40px;
+        box-shadow: 8px 8px 12px #aaa;
+      }
     }
   }
 
@@ -88,11 +92,18 @@ main {
 
       section {
         position: relative;
+        width: 455px;
+        height: 318px;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+
         div {
           width: 100%;
           height: auto;
           position: absolute;
-          bottom: 0px;
+          top: 0px;
           left: 0px;
           display: none;
           background-color: white;

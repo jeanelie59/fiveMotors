@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: sandybrown;
+  background-color: white;
   font-family: Verdana, sans-serif;
 }
 
@@ -26,7 +26,7 @@ header nav {
   height: 50px;
   display: flex;
   justify-content: center;
-  background-color: palevioletred;
+  background-color: #B29784;
 }
 header nav a {
   display: flex;
@@ -38,10 +38,10 @@ header nav a {
   color: wheat;
 }
 header nav a:hover {
-  background-color: blue;
+  background-color: gray;
 }
 header nav .active {
-  background-color: blue;
+  background-color: gray;
 }
 
 main {
@@ -69,6 +69,10 @@ main[class=index] article {
 main[class=index] article h4 {
   width: 40%;
 }
+main[class=index] article img {
+  border-radius: 40px;
+  box-shadow: 8px 8px 12px #aaa;
+}
 main[class=vehiculesDispo] {
   text-align: center;
 }
@@ -82,12 +86,18 @@ main[class=vehiculesDispo] div {
 }
 main[class=vehiculesDispo] div section {
   position: relative;
+  width: 455px;
+  height: 318px;
+  cursor: pointer;
+}
+main[class=vehiculesDispo] div section img {
+  width: 100%;
 }
 main[class=vehiculesDispo] div section div {
   width: 100%;
   height: auto;
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   left: 0px;
   display: none;
   background-color: white;
