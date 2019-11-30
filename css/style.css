@@ -1,6 +1,11 @@
-* {
-  margin: 0px;
-  padding: 0px;
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 60px 25px;
+    opacity: 0;
+  }
+}
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 body {
@@ -100,10 +105,121 @@ main[class=vehiculesDispo] div section div {
   display: none;
   background-color: white;
   opacity: 0.7;
-  padding: 2px 5px 2px 5px;
+  padding: 5px 5px 5px 5px;
 }
 main[class=vehiculesDispo] div section:hover div {
   display: initial;
+}
+main[class=contact] input {
+  outline: none;
+  border: none;
+}
+main[class=contact] textarea {
+  outline: none;
+  border: none;
+}
+main[class=contact] textarea:focus, main[class=contact] input:focus {
+  border-color: transparent !important;
+}
+main[class=contact] button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+main[class=contact] button:hover {
+  cursor: pointer;
+}
+main[class=contact] .contact-form {
+  width: 500px;
+}
+main[class=contact] .contact-form-title {
+  display: block;
+  font-size: 34px;
+  color: #2c3e50;
+  line-height: 1.2;
+  text-align: center;
+}
+main[class=contact] .wrap-input {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+main[class=contact] .input100 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+main[class=contact] input.input100 {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 50px;
+}
+main[class=contact] input.input100[name=email] {
+  padding: 0 30px 0 54px;
+}
+main[class=contact] textarea.input100 {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 14px 30px;
+}
+main[class=contact] .focus-input100 {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: #e67e22;
+}
+main[class=contact] .input100:focus + .focus-input100 {
+  animation: anim-shadow 1s ease-in-out forwards;
+}
+main[class=contact] .container-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+main[class=contact] .contact-form-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #846add;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: all 1s;
+}
+main[class=contact] .contact-form-btn:hover {
+  background: #333333;
+}
+main[class=contact] label {
+  width: 25px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 13px;
+}
+main[class=contact] label img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
 }
 
 footer {

@@ -1,7 +1,10 @@
 @import "color";
-* {
-  margin: 0px;
-  padding: 0px;
+@import "annimation";
+
+
+*, *:before, *:after
+{
+  box-sizing: border-box;
 }
 body {
   background-color: $background;
@@ -106,7 +109,7 @@ main {
           display: none;
           background-color: white;
           opacity: 0.7;
-          padding: 2px 5px 2px 5px;
+          padding: 5px 5px 5px 5px;
         }
         &:hover div {
           display: initial;
@@ -115,6 +118,134 @@ main {
     }
 
   }
+
+  &[class = 'contact'] {
+
+  input
+  {
+    outline: none;
+    border: none;
+  }
+
+  textarea
+  {
+    outline: none;
+    border: none;
+  }
+
+  textarea:focus, input:focus
+  {
+    border-color: transparent !important;
+  }
+
+  button
+  {
+    outline: none !important;
+    border: none;
+    background: transparent;
+  }
+
+  button:hover
+  {
+    cursor: pointer;
+  }
+
+  .contact-form {
+    width: 500px;
+  }
+  .contact-form-title
+  {
+    display: block;
+    font-size: 34px;
+    color: #2c3e50;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .wrap-input {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
+  .input100 {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+  }
+  input.input100 {
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 50px;
+  }
+  input.input100[name="email"] {
+    padding: 0 30px 0 54px;
+  }
+  textarea.input100 {
+    min-height: 150px;
+    border-radius: 25px;
+    padding: 14px 30px;
+  }
+  .focus-input100 {
+    display: block;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: #e67e22;
+  }
+  .input100:focus + .focus-input100 {
+    animation: anim-shadow 1s ease-in-out forwards;
+  }
+  .container-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .contact-form-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #846add;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    transition: all 1s;
+  }
+  .contact-form-btn:hover {
+    background: #333333;
+  }
+  label
+  {
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 13px;
+  }
+  label img
+  {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+  }
+}
 }
 
 footer {
