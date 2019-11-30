@@ -17,9 +17,6 @@ header {
   margin-top: 10px;
   section {
     margin: auto;
-    img {
-      border-radius: 50%;
-    }
   }
   nav {
     margin-top: 10px;
@@ -74,6 +71,7 @@ main {
         width: 40%;
       }
       img {
+        width: 60%;
         border-radius: 40px;
         box-shadow: 8px 8px 12px #aaa;
       }
