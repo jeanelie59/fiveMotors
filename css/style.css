@@ -57,24 +57,34 @@ main {
   border-radius: 20px;
 }
 main[class=index] {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-main[class=index] article {
-  margin-top: 30px;
-  width: 90%;
+main[class=index] h1 {
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+main[class=index] article a {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  text-align: left;
-  font-size: 20px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  padding: 5px;
 }
-main[class=index] article h4 {
+main[class=index] article a div {
+  color: black;
+  font-size: 30px;
+}
+main[class=index] article a img {
   width: 40%;
-}
-main[class=index] article img {
-  width: 60%;
   border-radius: 40px;
   box-shadow: 8px 8px 12px #aaa;
+}
+main[class=index] article:hover {
+  background-color: whitesmoke;
+  border-radius: 40px;
 }
 main[class=vehiculesDispo] {
   text-align: center;
@@ -224,10 +234,20 @@ main[class=contact] label img {
 main[class=pageVehicules] {
   text-align: center;
 }
+main[class=pageVehicules] a:first-child {
+  text-decoration: none;
+  font-size: 20px;
+  color: grey;
+  float: left;
+}
+main[class=pageVehicules] a:first-child img {
+  width: 20px;
+}
 main[class=pageVehicules] .firstSection {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  margin-bottom: 50px;
 }
 main[class=pageVehicules] .firstSection div:nth-child(2) ul {
   text-align: left;
@@ -306,6 +326,15 @@ footer div a {
   margin-left: 10px;
   text-decoration: none;
   color: wheat;
+}
+footer div a:hover {
+  color: sandybrown;
+}
+footer div a img {
+  transition: transform 1s;
+}
+footer div a img:hover {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

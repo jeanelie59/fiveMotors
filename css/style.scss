@@ -60,23 +60,36 @@ main {
   border-radius: 20px;
 
   &[class = 'index'] {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    h1 {
+      font-size: 40px;
+      padding-bottom: 50px;
+    }
     article {
-      margin-top: 30px;
-      width: 90%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      text-align: left;
-      font-size: 20px;
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        text-decoration:none;
+        padding: 5px;
+        div {
+          color:black;
+          font-size: 30px;
 
-      h4 {
-        width: 40%;
+        }
+         img {
+           width: 40%;
+           border-radius: 40px;
+           box-shadow: 8px 8px 12px #aaa;
+
+         }
       }
-      img {
-        width: 60%;
-        border-radius: 40px;
-        box-shadow: 8px 8px 12px #aaa;
+    &:hover    {
+       background-color: whitesmoke;
+      border-radius: 40px;
       }
     }
   }
@@ -249,10 +262,20 @@ main {
 
   &[class = 'pageVehicules'] {
     text-align: center;
+    a:first-child {
+      text-decoration: none;
+      font-size: 20px;
+      color: grey;
+      float: left;
+      img {
+        width: 20px;
+      }
+    }
     .firstSection {
       display: flex;
       justify-content: space-evenly;
       width: 100%;
+      margin-bottom: 50px;
 
       div:nth-child(2) {
         ul {
@@ -323,9 +346,19 @@ footer {
   padding: 10px;
 
   div a{
-  margin-left: 10px;
+    margin-left: 10px;
     text-decoration: none;
     color: wheat;
+    &:hover {
+      color:sandybrown;
+    }
+
+    img {
+      transition: transform 1s;
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
