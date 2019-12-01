@@ -28,7 +28,7 @@ header nav {
   height: 50px;
   display: flex;
   justify-content: center;
-  background-color: #B29784;
+  background-color: gray;
 }
 header nav a {
   display: flex;
@@ -40,10 +40,10 @@ header nav a {
   color: wheat;
 }
 header nav a:hover {
-  background-color: gray;
+  background-color: darkgray;
 }
 header nav .active {
-  background-color: gray;
+  background-color: darkgray;
 }
 
 main {
@@ -316,7 +316,7 @@ footer {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  background-color: rosybrown;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,7 +325,7 @@ footer {
 footer div a {
   margin-left: 10px;
   text-decoration: none;
-  color: wheat;
+  color: white;
 }
 footer div a:hover {
   color: sandybrown;
