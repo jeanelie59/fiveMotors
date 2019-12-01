@@ -246,6 +246,69 @@ main {
     border-style: none;
   }
 }
+
+  &[class = 'pageVehicules'] {
+    text-align: center;
+    .firstSection {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      div:nth-child(2) {
+        ul {
+          text-align: left;
+        }
+      }
+      .containImg {
+        width: 50%;
+        height: 350px;
+        position: relative;
+        box-shadow: 8px 8px 12px #aaa;
+        background-size: 100% 100%;
+
+        @for $i from 1 through 3 {
+          img:nth-child(#{$i}) {
+            width: 100px;
+            position: absolute;
+            left: 10px +($i - 1)*110px;
+            bottom: -20px;
+            border-radius: 20px;
+          }
+        }
+        img:hover {
+          border: 1px solid grey;
+        }
+      }
+      .voiture1 {
+        background-image: url("../img/voiture 1/voiture-1-0.png");
+      }
+      .voiture2 {
+        background-image: url("../img/voiture 2/voiture-2-0.png");
+      }
+      .voiture3 {
+        background-image: url("../img/voiture 3/voiture-3-0.png");
+      }
+      .voiture4 {
+        background-image: url("../img/voiture 4/voiture4.png");
+      }
+      .voiture5 {
+        background-image: url("../img/voiture 5/voiture5.png");
+      }
+      .voiture6 {
+        background-image: url("../img/voiture 6/voiture6.png");
+      }
+      .voiture7 {
+        background-image: url("../img/voiture 7/voiture7.png");
+      }
+      .voiture8 {
+        background-image: url("../img/voiture 8/voiture8.png");
+      }
+      .voiture9 {
+        background-image: url("../img/voiture 9/voiture9.png");
+      }
+    }
+
+  }
 }
 
 footer {
